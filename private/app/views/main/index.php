@@ -14,8 +14,8 @@
 </div>
    <nav id="nav">
     <ul>
-        <li><a  href="temp.html"><span>Home</span></a></li>
-        <li> <a href="listing.html" ><span>Blog Listing</span></a></li>
+        <li><a  href="index.php"><span>Home</span></a></li>
+        <li> <a href="listing.php" ><span>Blog Listing</span></a></li>
         <li><a  href="singleblog.html"><span>View Single Blog</span></a></li>
     </ul>
 </nav>

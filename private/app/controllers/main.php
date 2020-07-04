@@ -13,8 +13,10 @@ class Main extends Controller {
         $this->view("template/header");
         $this->view("main/index");
         $this->view("template/footer");
+
         
     }
+    
 
 }
 
