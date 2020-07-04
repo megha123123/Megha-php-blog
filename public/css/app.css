@@ -1,3 +1,85 @@
-.header {
+/*.header {
     text-align: center;
+}*/
+
+
+#nav {
+		position: absolute;
+		top: 3em;
+		left: 0;
+		width: 100%;
+		cursor: default;
+	}
+
+		#nav > ul > li {
+			display: inline-block;
+			padding-right: 4em;
+			padding-left: 2em;
+		}
+
+			
+
+			#nav > ul > li > a {
+				border: 0;
+				text-decoration: none;
+				text-transform: uppercase;
+				font-weight: 500;
+				color: black;
+    			display: block;
+			}
+
+				
+			#nav > ul > li:hover > a > span {
+				color: grey;
+			}
+
+
+
+
+
+#top {
+		position: relative;
+		overflow: hidden;
+		background: rgb(188, 226, 210);
+		text-align: center;
+        padding: 2em 0;
+		color: black;
+		margin-top: 4em;
 }
+    
+
+.image{
+
+background-image: url("pexels.jpeg");
+
+background-repeat: no-repeat;
+
+background-size: cover;
+
+
+
+
+
+}
+
+
+#mainheading{
+	color: black;
+}
+
+
+#subheading{
+	color: black;
+	text-align: left;
+
+
+}
+
+p{
+text-align: justify;	
+color:white;
+}
+
+
+
+
