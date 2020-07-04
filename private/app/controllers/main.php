@@ -11,15 +11,16 @@ class Main extends Controller {
     function Index () {
 
         $this->view("template/header");
-        $this->view("main/index");
+        $this->view("template/nav");
+        $this->view("template/middle");
         $this->view("template/footer");
 
         
     }
     function listblog () {
-                $this->view("template/menu");
+                        $this->view("template/nav");
 
-                $this->view("list/listing");
+                $this->view("list/index");
 
     }
     
