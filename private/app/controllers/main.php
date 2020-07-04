@@ -16,7 +16,12 @@ class Main extends Controller {
 
         
     }
-    
+    function listblog () {
+                $this->view("template/menu");
+
+                $this->view("list/listing");
+
+    }
     
     
 }
