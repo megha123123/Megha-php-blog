@@ -4,7 +4,7 @@
     </div>
 
 <nav>
-    <ul>
+    <ul id="nav2">
         <li><a  href="/main/single">Blog 1</a></li>
         <li> <a href="/main/single">Blog 2</a></li>
         <li><a  href="/main/single">Blog 3</a></li>

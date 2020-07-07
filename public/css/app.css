@@ -9,6 +9,7 @@
 		left: 0;
 		width: 100%;
 		cursor: default;
+        padding-top: 20px;
 	}
 
 		#nav > ul > li {
@@ -23,8 +24,8 @@
 				border: 0;
 				text-decoration: none;
 				text-transform: uppercase;
-				font-weight: 500;
-				color: black;
+				font-weight: 700;
+				color: white;
     			display: block;
 			}
 
@@ -34,7 +35,9 @@
 			}
 
 
-
+#nav2 >li >a {
+    color:yellowgreen;
+}
 
 
 #top {
@@ -64,12 +67,13 @@ background-size: cover;
 
 
 #mainheading{
-	color: black;
+	color: rgb(187, 189, 187);
+    padding-bottom: 30px;
 }
 
 
 #subheading{
-	color: black;
+	color: rgb(187, 189, 187);
 	text-align: left;
     padding-top: 30px;
 
