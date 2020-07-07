@@ -19,15 +19,21 @@ class Main extends Controller {
     }
     function listblog () {
 
+            $this->view("template/header");
             $this->view("template/nav");
             $this->view("list/index");
+            $this->view("template/footer");
+
 
     }
 
     function single () {
 
+             $this->view("template/header");
              $this->view("template/nav");
              $this->view("singleblog/index");
+             $this->view("template/footer");
+
 
     }
     

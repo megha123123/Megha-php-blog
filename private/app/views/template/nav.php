@@ -1,6 +1,6 @@
 <body class="image">
 	<div id="mainheading">
-<h1>My Blog !!</h1>
+<h1>Megha_Blog !!</h1>
 </div>
    <nav id="nav">
     <ul>
