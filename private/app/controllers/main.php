@@ -18,9 +18,16 @@ class Main extends Controller {
         
     }
     function listblog () {
-                        $this->view("template/nav");
 
-                $this->view("list/index");
+            $this->view("template/nav");
+            $this->view("list/index");
+
+    }
+
+    function single () {
+
+             $this->view("template/nav");
+             $this->view("singleblog/index");
 
     }
     
