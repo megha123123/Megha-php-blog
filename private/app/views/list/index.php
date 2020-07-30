@@ -1,4 +1,4 @@
-
+<div id="blog">
     <h2>
    <a href="/main/single/<?php echo $serial_num;?>"> 
 
@@ -7,12 +7,12 @@
     ?>
     </a>
     </h2>
-<h4>
+<h3>
      <?php
         echo $author_name;
     ?>
-    </h4>
-    
+    </h3>
+
 <h4>
      <?php
         echo $author_email;
@@ -29,5 +29,5 @@
     ?></p>
 
 
-
+</div>
 
