@@ -23,8 +23,8 @@ class BlogModel extends Model{
         return $res;
 
     }
-    function getSingleBlog($serial_num){
-        
+    function getSingleBlog($serial_num=1){
+
         $sql ='SELECT * FROM blog_lists WHERE serial_num = ?';
         $stmt = $this->db->prepare($sql);
         $stmt->execute(array($serial_num));

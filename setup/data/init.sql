@@ -9,7 +9,7 @@ CREATE TABLE blog_lists (
     serial_num int primary key
     , blog_name varchar(255)
     , blog_content text
-    , author_email varchar(255) REFERENCES author(email) 
+    , author_email varchar(255) REFERENCES blog_author(author_email) 
     , publish_date DATETIME 
 
 ); 

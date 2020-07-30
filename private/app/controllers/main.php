@@ -19,21 +19,30 @@ class Main extends Controller {
     }
     function listblog () {
             $this->model('blogmodel');
-            $posts = $this->blogmodel->getList();
+            $list = $this->blogmodel->getList();
+
+            
+            
 
             $this->view("template/header");
             $this->view("template/nav");
-            $this->view("list/index");
+            foreach($list as $item){
+                            $this->view("list/index",$item);
+
+            }
             $this->view("template/footer");
 
 
     }
 
-    function single () {
+    function single ($id=1) {
+
+        $this->model('blogmodel');
+            $single_blog = $this->blogmodel->getSingleBlog($id);
 
              $this->view("template/header");
              $this->view("template/nav");
-             $this->view("singleblog/index");
+             $this->view("singleblog/index",$single_blog);
              $this->view("template/footer");
 
 

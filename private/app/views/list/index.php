@@ -1,15 +1,27 @@
 
-    <div id="subheading">
-<h2>This is list of Blogs </h2>
-    </div>
+    <h2>
+   <a href="/main/single/<?php echo $serial_num;?>"> 
 
-<nav>
-    <ul id="nav2">
-        <li><a  href="/main/single">Blog 1</a></li>
-        <li> <a href="/main/single">Blog 2</a></li>
-        <li><a  href="/main/single">Blog 3</a></li>
-    </ul>
-</nav>
+   <?php
+echo $blog_name;
+    ?></a>
+    </h2>
+
+<h4>
+     <?php
+echo $author_email;
+    ?>
+    </h4>
+
+
+<h4><?php
+echo $publish_date;
+    ?></h4>
+
+<p><?php
+echo $blog_content;
+    ?></p>
+
 
 
 

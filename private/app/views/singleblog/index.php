@@ -1,12 +1,12 @@
 <div id="subheading">
-		<h2>Single Blog !!</h2>
+
+
+		<h2> <?php
+echo $blog_name;
+    ?></h2>
 			</div>
 		
-		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam odit, perspiciatis libero mollitia magnam, facere architecto aliquam nemo tenetur et eligendi soluta ullam aperiam quo dignissimos doloribus fugiat, impedit ipsa.Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam odit, perspiciatis libero mollitia magnam, facere architecto aliquam nemo tenetur et eligendi soluta ullam aperiam quo dignissimos doloribus fugiat, impedit ipsa.Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam odit, perspiciatis libero mollitia magnam, facere architecto aliquam nemo tenetur et eligendi soluta ullam aperiam quo dignissimos doloribus fugiat, impedit ipsa.Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam odit, perspiciatis libero mollitia magnam, facere architecto aliquam nemo tenetur et eligendi soluta ullam aperiam quo dignissimos doloribus fugiat, impedit ipsa.
-			Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam odit, perspiciatis libero mollitia magnam, facere architecto aliquam nemo tenetur et eligendi soluta ullam aperiam quo dignissimos doloribus fugiat, impedit ipsa.
-			Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam odit, perspiciatis libero mollitia magnam, facere architecto aliquam nemo tenetur et eligendi soluta ullam aperiam quo dignissimos doloribus fugiat, impedit ipsa.
-			Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam odit, perspiciatis libero mollitia magnam, facere architecto aliquam nemo tenetur et eligendi soluta ullam aperiam quo dignissimos doloribus fugiat, impedit ipsa.
-			Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam odit, perspiciatis libero mollitia magnam, facere architecto aliquam nemo tenetur et eligendi soluta ullam aperiam quo dignissimos doloribus fugiat, impedit ipsa.
-			Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam odit, perspiciatis libero mollitia magnam, facere architecto aliquam nemo tenetur et eligendi soluta ullam aperiam quo dignissimos doloribus fugiat, impedit ipsa.
-			
+		<p> <?php
+echo $blog_content;
+    ?>
 		</p>
