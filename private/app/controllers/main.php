@@ -18,6 +18,8 @@ class Main extends Controller {
         
     }
     function listblog () {
+            $this->model('blogmodel');
+            $posts = $this->blogmodel->getList();
 
             $this->view("template/header");
             $this->view("template/nav");

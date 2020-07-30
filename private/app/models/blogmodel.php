@@ -14,7 +14,7 @@ class BlogModel extends Model{
         return $res[0];
 
     }
-    function getBlogList(){
+    function getList(){
 
          $sql = 'SELECT * FROM blog_lists';
         $stmt = $this->db->prepare($sql);
@@ -23,8 +23,9 @@ class BlogModel extends Model{
         return $res;
 
     }
-    function getBlogPost($serial_num){
-        $sql ='SELECT *FROM blog_lists WHERE serial_num = ?';
+    function getSingleBlog($serial_num){
+        
+        $sql ='SELECT * FROM blog_lists WHERE serial_num = ?';
         $stmt = $this->db->prepare($sql);
         $stmt->execute(array($serial_num));
         $res = $stmt->fetch();
