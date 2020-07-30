@@ -1,5 +1,6 @@
 <div id="blog">
-    <h2>
+    <h2 id="blog1">
+
    <a href="/main/single/<?php echo $serial_num;?>"> 
 
    <?php

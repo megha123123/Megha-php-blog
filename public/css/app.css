@@ -87,8 +87,18 @@ color:white;
 
 #blog{
     color:white;
+    padding-top:30px;
+}
+#blog1 > a{
+    color:rgb(121, 185, 121);
+}
+#blog1 > a:hover{
+    color:blue;
 }
 
+#blog1 > a:visited{
+    color:rgb(204, 120, 204);
+}
 
 
 
