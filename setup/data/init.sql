@@ -6,7 +6,7 @@ author_name varchar(255) not null
 );
 
 CREATE TABLE blog_lists (
-    serial_num int primary key
+    serial_num int primary key auto_increment
     , blog_name varchar(255)
     , author_name varchar(50)
     , blog_content text

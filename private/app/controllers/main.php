@@ -50,9 +50,13 @@ class Main extends Controller {
 
     function new () {
 
+         $this->model('blogmodel');
+            $new = $this->blogmodel->getInsertNew($blog_name,$author_name,$blog_content,$author_email,$publish_date);
+
+
         $this->view("template/header");
         $this->view("template/nav");
-        $this->view("new/new");
+        $this->view("new/new",$new);
         $this->view("template/footer");
 
         
