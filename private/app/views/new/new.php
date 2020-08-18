@@ -21,20 +21,34 @@
 
 <div class="form">
 
-    <label for="date"><b>Publish Date</b></label>
-    <input type="date" name="date" id="date" placeholder="Enter Publish Date">
+    <label for="dates"><b>Publish Date</b></label>
+    <input type="date" name="dates" id="dates" placeholder="Enter Publish Date">
     <br>
 </div>
 
 <div class="form">
 
-    <label for="cont"><b>Content</b></label>
-    <textarea id="cont" name="cont" rows="20" cols="20" placeholder="Enter Content"></textarea>
+    <label for="content"><b>Content</b></label>
+    <textarea id="content" name="content" rows="20" cols="20" placeholder="Enter Content"></textarea>
     <br>
 </div>
 
 <div class="form">
 
-    <button type="submit">Submit</button>
+    <input type="submit" id="submit" name="submit" value="SUBMIT">
 </div>
 </form>
+
+<?php if(isset($_POST['submit'])){
+    $title = $_POST['title'];
+    $author = $_POST['author'];
+    $email = $_POST['email'];
+    $dates = $_POST['dates'];
+    $content = $_POST['content'];
+
+   $this->model('blogmodel');
+            $new = $this->blogmodel->getInsertNew($title,$author,$content,$email,$dates);
+
+
+}
+?>
