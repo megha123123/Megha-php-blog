@@ -48,10 +48,10 @@ class Main extends Controller {
 
     }
 
-    function new ($title,$author,$content,$email,$dates) {
+    function new ($title,$author,$content,$email,$dates,$new) {
 
-         $this->model('blogmodel');
-            $new = $this->blogmodel->getInsertNew($title,$author,$content,$email,$dates);
+        // $this->model('blogmodel');
+            //$new = $this->blogmodel->getInsertNew($title,$author,$content,$email,$dates);
 
 
         $this->view("template/header");
