@@ -7,5 +7,7 @@
         <li><a  href="index.php"><span>Home</span></a></li>
         <li> <a href="/main/listblog" ><span>Blog Listing</span></a></li>
         <li><a  href="/main/single"><span>View Single Blog</span></a></li>
+        <li><a  href="/main/new"><span>Add New Blog</span></a></li>
+
     </ul>
 </nav>

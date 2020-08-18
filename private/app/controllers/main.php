@@ -47,6 +47,16 @@ class Main extends Controller {
 
 
     }
+
+    function new () {
+
+        $this->view("template/header");
+        $this->view("template/nav");
+        $this->view("new/new");
+        $this->view("template/footer");
+
+        
+    }
     
     
 }
