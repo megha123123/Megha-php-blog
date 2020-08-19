@@ -2,7 +2,7 @@
     <h2 id="blog1">
 
    <a href="/main/single/<?php echo $serial_num;?>"> 
-
+<a href="/main/updateBlog/<?php ?>">
    <?php
         echo $blog_name;
     ?>
