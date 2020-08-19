@@ -8,11 +8,6 @@
     ?>
     </a>
 
-    <a href="/main/updateBlog/<?php echo $serial_num; ?>">
-<?php
-        echo $update;
-    ?>
-    </a>
 
     </h2>
 <h3>
@@ -37,5 +32,19 @@
     ?></p>
 
 
+
+
+<form>
+<input type="submit" id="submit" name="submit" value="UPDATE">
+</form>
+<a href="/main/updateBlog/<?php echo $serial_num;?>">
+<?php
+               echo $submit;
+
+    ?>
+    </a>
+
+
+    
 </div>
 

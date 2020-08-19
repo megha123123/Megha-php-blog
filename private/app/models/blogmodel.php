@@ -46,10 +46,10 @@ class BlogModel extends Model{
 
     function getUpdate($title,$author,$content,$email,$date){
         $sql = 'UPDATE blog_lists SET blog_name = ?, author_name = ?, blog_content = ?,author_email = ?,publish_date =? WHERE serial_num = ?';
-    $stmt = $this->db->prepare($sql);
+        $stmt = $this->db->prepare($sql);
 
-        $updateVal=array($title,$author,$content,$email,$date);
-        $stmt->execute($updateVal);
+        $val=array($title,$author,$content,$email,$date);
+        $stmt->execute($val);
 
 
         $res = $stmt->fetchAll();

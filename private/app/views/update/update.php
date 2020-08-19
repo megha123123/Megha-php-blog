@@ -47,7 +47,7 @@
     $content = $_POST['content'];
 
    $this->model('blogmodel');
-            $new = $this->blogmodel->getInsertNew($title,$author,$content,$email,$dates);
+            $new = $this->blogmodel->getUpdate($title,$author,$content,$email,$dates);
 
 
 }
