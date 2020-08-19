@@ -2,11 +2,18 @@
     <h2 id="blog1">
 
    <a href="/main/single/<?php echo $serial_num;?>"> 
-<a href="/main/updateBlog/<?php ?>">
+
    <?php
         echo $blog_name;
     ?>
     </a>
+
+    <a href="/main/updateBlog/<?php echo $serial_num; ?>">
+<?php
+        echo $update;
+    ?>
+    </a>
+
     </h2>
 <h3>
      <?php
