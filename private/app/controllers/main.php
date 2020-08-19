@@ -48,7 +48,7 @@ class Main extends Controller {
 
     }
 
-    function new ($title,$author,$content,$email,$dates,$new) {
+    function newBlog() {
 
         // $this->model('blogmodel');
             //$new = $this->blogmodel->getInsertNew($title,$author,$content,$email,$dates);
@@ -56,7 +56,7 @@ class Main extends Controller {
 
         $this->view("template/header");
         $this->view("template/nav");
-        $this->view("new/new",$new);
+        $this->view("new/new");
         $this->view("template/footer");
 
         

@@ -33,9 +33,13 @@ class BlogModel extends Model{
     }
 
     function getInsertNew($title,$author,$content,$email,$date){
-        $sql = 'INSERT INTO blog_lists (blog_name, author_name, blog_content,author_email,publish_date) VALUES ($title, $author,$content,$email,$dates)';
+        $sql = 'INSERT INTO blog_lists (blog_name, author_name, blog_content,author_email,publish_date) VALUES (?,?,?,?,?)';
         $stmt = $this->db->prepare($sql);
-        $stmt->execute();
+
+        $val=array($title,$author,$content,$email,$date);
+        $stmt->execute($val);
+
+
         $res = $stmt->fetchAll();
         return $res;
     }
