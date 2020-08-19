@@ -61,6 +61,13 @@ class Main extends Controller {
 
         
     }
+
+    function updateBlog(){
+        $this->view("template/header");
+        $this->view("template/nav");
+        $this->view("update/update");
+        $this->view("template/footer");
+    }
     
     
 }
