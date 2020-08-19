@@ -34,7 +34,7 @@
 
 
 
-<form>
+<form action="/main/updateBlog/<?php echo $serial_num;?>">
 <input type="submit" id="submit" name="submit" value="UPDATE">
 </form>
 <a href="/main/updateBlog/<?php echo $serial_num;?>">
@@ -45,6 +45,6 @@
     </a>
 
 
-    
+
 </div>
 

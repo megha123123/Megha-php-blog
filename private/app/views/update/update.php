@@ -1,4 +1,10 @@
 <form method="post">
+
+
+<div class="form">
+
+    <input type="hidden" id="serial" name="serial" value="">
+</div>
     <div class="form">
 
     <label for="title"><b>Title</b></label>
@@ -45,9 +51,10 @@
     $email = $_POST['email'];
     $dates = $_POST['dates'];
     $content = $_POST['content'];
+    $serial = $_POST['serial'];
 
    $this->model('blogmodel');
-            $new = $this->blogmodel->getUpdate($title,$author,$content,$email,$dates);
+            $new = $this->blogmodel->getUpdate($title,$author,$content,$email,$dates,$serial_num);
 
 
 }

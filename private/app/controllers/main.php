@@ -62,10 +62,15 @@ class Main extends Controller {
         
     }
 
-    function updateBlog(){
+    function updateBlog($serial_num){
+
+        $this->model('blogmodel');
+            $serial = $this->blogmodel->getUpdate($serial_num);
+
+
         $this->view("template/header");
         $this->view("template/nav");
-        $this->view("update/update");
+        $this->view("update/update",$serial);
         $this->view("template/footer");
     }
     
