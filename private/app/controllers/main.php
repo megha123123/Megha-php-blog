@@ -62,15 +62,31 @@ class Main extends Controller {
         
     }
 
-    function updateBlog(){
+    function updateBlog($serial=null){
 
-        //$this->model('blogmodel');
-           // $serial = $this->blogmodel->getUpdate();
+        $this->model('blogmodel');
+           
+
+           if(isset($_POST['submit'])){
+               
+    $title = $_POST['title'];
+    $author = $_POST['author'];
+    $email = $_POST['email'];
+    $dates = $_POST['dates'];
+    $content = $_POST['content'];
+    $serial = $_POST['serial'];
+
+   
+    $new = $this->blogmodel->getUpdate($title,$author,$content,$email,$dates,$serial);
+
+
+}
+$post = $this->blogmodel->getSingleBlog($serial);
 
 
         $this->view("template/header");
         $this->view("template/nav");
-        $this->view("update/update");
+        $this->view("update/update",$post);
         $this->view("template/footer");
     }
     
