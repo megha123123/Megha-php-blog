@@ -63,8 +63,8 @@ function getLogin($username){
     $stmt = $this->db->prepare($sql);
     $val=array($username);
     $stmt->execute($val);
-    $res = $stmt->fetchAll();
-    return $res;
+    $res = $stmt->fetch();
+    return $res[0];
 
 
 }

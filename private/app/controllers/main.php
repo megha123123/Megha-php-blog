@@ -92,32 +92,38 @@ $post = $this->blogmodel->getSingleBlog($serial);
 
 
 
- function login() {
+ 
+
+    function login() {
 
     if($_SERVER["REQUEST_METHOD"] == "POST"){
 
-    $username = htmlentities($_POST["username"]);
+            $username= htmlentities($_POST["email"]);
+
+
     //$password = htmlentities($_POST["password"]);
-    }
-
-    $this->model('blogmodel');
-            $new = $this->blogmodel->getLogin($username);
-
+    
+    
+   // $this->model('blogmodel');
+           // $new = $this->blogmodel->getLogin($username);
+    
 
     $check = password_hash("mypassword",PASSWORD_DEFAULT);
     echo($check);
 
-    
+    }
+    else{
 
         $this->view("template/header");
         $this->view("template/nav");
         $this->view("login/login");
         $this->view("template/footer");
-
-        
     }
     
+    }
     
+ 
 }
+
 
 ?>

@@ -1,10 +1,10 @@
-<form method="post" action="/main/Index/">
+<form method="POST" action="/main/Index/">
     
 
 <div class="form">
 
-    <label for="username"><b>Username</b></label>
-    <input type="username" name="username" id="username" placeholder="Enter First name">
+    <label for="email"><b>Email</b></label>
+    <input type="email" name="email" id="email" placeholder="Enter Email">
     <br>
 </div>
 
