@@ -3,8 +3,8 @@
 
 <div class="form">
 
-    <label for="email"><b>Email</b></label>
-    <input type="email" name="email" id="email" placeholder="Enter Email">
+    <label for="username"><b>Username</b></label>
+    <input type="username" name="username" id="username" placeholder="Enter First name">
     <br>
 </div>
 

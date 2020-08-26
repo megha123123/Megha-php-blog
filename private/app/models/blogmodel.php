@@ -58,7 +58,16 @@ class BlogModel extends Model{
     }
 
 
+function getLogin($username){
+    $sql = 'SELECT password_hash FROM blog_author WHERE author_name = ? ';
+    $stmt = $this->db->prepare($sql);
+    $val=array($username);
+    $stmt->execute($val);
+    $res = $stmt->fetchAll();
+    return $res;
 
+
+}
 
         
     
