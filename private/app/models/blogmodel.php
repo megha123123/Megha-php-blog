@@ -59,6 +59,7 @@ class BlogModel extends Model{
 
 
 
+
         
     
 }

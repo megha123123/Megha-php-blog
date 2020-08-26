@@ -89,6 +89,18 @@ $post = $this->blogmodel->getSingleBlog($serial);
         $this->view("update/update",$post);
         $this->view("template/footer");
     }
+
+
+
+ function login() {
+
+        $this->view("template/header");
+        $this->view("template/nav");
+        $this->view("login/login");
+        $this->view("template/footer");
+
+        
+    }
     
     
 }
