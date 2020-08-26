@@ -2,7 +2,7 @@ use database;
 CREATE TABLE blog_author (
 author_name varchar(255) not null
 ,author_email varchar(255) primary key
-
+,password_hash varchar(225) not null
 );
 
 CREATE TABLE blog_lists (
