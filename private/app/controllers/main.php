@@ -108,7 +108,7 @@ function login() {
 
      $this->view("template/header");
         $this->view("template/nav");
-        $this->view("login/login");
+        $this->view("login/login",$new);
         $this->view("template/footer");
 
     }
