@@ -21,6 +21,7 @@ INSERT INTO blog_author values("Thomas","thomas.crane@gmail.com","$2y$10$5EXGTc3
 INSERT INTO blog_author values("Rayon","rayon.hopkins@gmail.com","$2y$10$5EXGTc3dqd6L6w7ENKL4ROwWlrFfYiN06zmeIOkCGvgGEdQbfy0aq");
 INSERT INTO blog_author values("Troy","troy.vincent@gmail.com","$2y$10$5EXGTc3dqd6L6w7ENKL4ROwWlrFfYiN06zmeIOkCGvgGEdQbfy0aq");
 
+--password "mypassword"
 
 INSERT INTO blog_lists values("1","Blog by Kierra","Kierra Gentry","This is the content....","kierra.gentry@gmail.com","2017-05-18");
 INSERT INTO blog_lists values("2","Blog by Miranda","Miranda Shaffer","This is the content....","miranda.shaffer@gmail.com","2019-04-20");
