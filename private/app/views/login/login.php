@@ -1,3 +1,5 @@
+<body class="image">
+
 <form method="POST">
     
 
@@ -21,3 +23,4 @@
 </div>
 
 </form>
+</body>

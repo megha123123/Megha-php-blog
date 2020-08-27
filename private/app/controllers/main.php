@@ -10,7 +10,7 @@ class Main extends Controller {
      */
     function Index () {
 
-        if ($_SERVER["REQUEST_METHOD"] == "POST" && (empty($_SESSION["isLoggedIn"]) || !$_SESSION["isLoggedIn"])) {
+    if ($_SERVER["REQUEST_METHOD"] == "POST" && (empty($_SESSION["isLoggedIn"]) || !$_SESSION["isLoggedIn"])) {
 
    
     $username = htmlentities($_POST["email"]);
@@ -40,7 +40,8 @@ class Main extends Controller {
     else{
        // $this->view("template/header");
         //$this->view("template/nav");
-            header("Location: /main/login");
+            header("Location: /main/Index");
+
 
     } 
 }else {
