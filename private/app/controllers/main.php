@@ -98,7 +98,6 @@ $post = $this->blogmodel->getSingleBlog($serial);
 function login() {
 
     if($_SERVER["REQUEST_METHOD"] == "POST" && (empty($_SESSION["isLoggedIn"]) || !$_SESSION["isLoggedIn"])){
-
     $username= htmlentities($_POST["email"]);
     $password = htmlentities($_POST["password"]);
     
@@ -111,14 +110,14 @@ function login() {
     $_SESSION["email"] = $username;
 
     if($_SESSION["isLoggedin"]){
-        header("Location: /");
-    
+    header("Location: /");
     }
-     //$this->view("template/header");
+    
+        //$this->view("template/header");
         //$this->view("template/nav");
        // $this->view("login/login",$new);
        // $this->view("template/footer");
-
+    
     
     else{
         $this->view("template/header");
