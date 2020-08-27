@@ -125,9 +125,10 @@ function login() {
     
     
     else{
-        $this->view("template/header");
-        $this->view("template/nav");
-        
+       // $this->view("template/header");
+        //$this->view("template/nav");
+            header("Location: /main/login");
+
     }
     
     }
