@@ -97,10 +97,10 @@ $post = $this->blogmodel->getSingleBlog($serial);
 
 function login() {
 
-    if($_SERVER["REQUEST_METHOD"] == "POST" && (empty($_SESSION["isLoggedIn"]) || !$_SESSION["isLoggedIn"])){
+    if ($_SERVER["REQUEST_METHOD"] == "POST" && (empty($_SESSION["isLoggedIn"]) || !$_SESSION["isLoggedIn"])) {
 
    
-    $username= htmlentities($_POST["email"]);
+    $username = htmlentities($_POST["email"]);
     $password = htmlentities($_POST["password"]);
     
     
@@ -110,11 +110,11 @@ function login() {
            
     
 
-    $isChecked = password_verify($password,$new);
+    $isChecked = password_verify($password, $new);
     $_SESSION["isLoggedin"] = $isChecked;
     $_SESSION["email"] = $username;
 
-    if($_SESSION["isLoggedin"]){
+    if($_SESSION["isLoggedin"]) {
     header("Location: /main/Index");
     }
     
@@ -129,6 +129,19 @@ function login() {
         //$this->view("template/nav");
             header("Location: /main/login");
 
+    } 
+}else {
+        if(empty($_SESSION["isLoggedin"]) || !$_SESSION["isLoggedin"]) {
+
+            $details = Array("title" => "sign In");
+
+        $this->view("template/header");
+        $this->view("template/nav");
+        $this->view("login/login",$details);
+        $this->view("template/footer");
+        } else {
+            header("Location : /main/Index");
+        }
     }
     
     }
@@ -140,5 +153,5 @@ function login() {
 
  
 }
-}
+
 ?>
