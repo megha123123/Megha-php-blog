@@ -47,8 +47,8 @@ class Main extends Controller {
 
 
 
-             $check = password_hash("mypassword",PASSWORD_DEFAULT);
-    echo($check);
+            // $check = password_hash("mypassword",PASSWORD_DEFAULT);
+                // echo($check);
 
 
     }
@@ -110,7 +110,7 @@ function login() {
     $_SESSION["email"] = $username;
 
     if($_SESSION["isLoggedin"]){
-    header("Location: /");
+    header("Location: /main/Index");
     }
     
         //$this->view("template/header");
