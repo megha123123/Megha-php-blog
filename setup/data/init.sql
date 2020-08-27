@@ -15,11 +15,11 @@ CREATE TABLE blog_lists (
 
 ); 
 
-INSERT INTO blog_author values("Kierra","kierra.gentry@gmail.com");
-INSERT INTO blog_author values("Miranda","miranda.shaffer@gmail.com");
-INSERT INTO blog_author values("Thomas","thomas.crane@gmail.com");
-INSERT INTO blog_author values("Rayon","rayon.hopkins@gmail.com");
-INSERT INTO blog_author values("Troy","troy.vincent@gmail.com");
+INSERT INTO blog_author values("Kierra","kierra.gentry@gmail.com","$2y$10$5EXGTc3dqd6L6w7ENKL4ROwWlrFfYiN06zmeIOkCGvgGEdQbfy0aq");
+INSERT INTO blog_author values("Miranda","miranda.shaffer@gmail.com","$2y$10$5EXGTc3dqd6L6w7ENKL4ROwWlrFfYiN06zmeIOkCGvgGEdQbfy0aq");
+INSERT INTO blog_author values("Thomas","thomas.crane@gmail.com","$2y$10$5EXGTc3dqd6L6w7ENKL4ROwWlrFfYiN06zmeIOkCGvgGEdQbfy0aq");
+INSERT INTO blog_author values("Rayon","rayon.hopkins@gmail.com","$2y$10$5EXGTc3dqd6L6w7ENKL4ROwWlrFfYiN06zmeIOkCGvgGEdQbfy0aq");
+INSERT INTO blog_author values("Troy","troy.vincent@gmail.com","$2y$10$5EXGTc3dqd6L6w7ENKL4ROwWlrFfYiN06zmeIOkCGvgGEdQbfy0aq");
 
 
 INSERT INTO blog_lists values("1","Blog by Kierra","Kierra Gentry","This is the content....","kierra.gentry@gmail.com","2017-05-18");

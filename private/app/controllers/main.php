@@ -46,6 +46,11 @@ class Main extends Controller {
              $this->view("template/footer");
 
 
+
+             $check = password_hash("mypassword",PASSWORD_DEFAULT);
+    echo($check);
+
+
     }
 
     function newBlog() {
@@ -92,26 +97,29 @@ $post = $this->blogmodel->getSingleBlog($serial);
 
 function login() {
 
-    if($_SERVER["REQUEST_METHOD"] == "POST"){
+    if($_SERVER["REQUEST_METHOD"] == "POST" && (empty($_SESSION["isLoggedIn"]) || !$_SESSION["isLoggedIn"])){
 
-            $username= htmlentities($_POST["email"]);
-
-
-    //$password = htmlentities($_POST["password"]);
+    $username= htmlentities($_POST["email"]);
+    $password = htmlentities($_POST["password"]);
     
     
     $this->model('blogmodel');
            $new = $this->blogmodel->getLogin($username);
 
-    $check = password_hash("mypassword",PASSWORD_DEFAULT);
-    echo($check);
+    $isChecked = password_verify($password,$new);
+    $_SESSION["isLoggedin"] = $isChecked;
+    $_SESSION["email"] = $username;
 
-     $this->view("template/header");
-        $this->view("template/nav");
-        $this->view("login/login",$new);
-        $this->view("template/footer");
-
+    if($_SESSION["isLoggedin"]){
+        header("Location: /");
+    
     }
+     //$this->view("template/header");
+        //$this->view("template/nav");
+       // $this->view("login/login",$new);
+       // $this->view("template/footer");
+
+    
     else{
         $this->view("template/header");
         $this->view("template/nav");
@@ -127,6 +135,5 @@ function login() {
 
  
 }
-
-
+}
 ?>
