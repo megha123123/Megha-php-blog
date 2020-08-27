@@ -10,13 +10,70 @@ class Main extends Controller {
      */
     function Index () {
 
-        $this->view("template/header");
+        if ($_SERVER["REQUEST_METHOD"] == "POST" && (empty($_SESSION["isLoggedIn"]) || !$_SESSION["isLoggedIn"])) {
+
+   
+    $username = htmlentities($_POST["email"]);
+    $password = htmlentities($_POST["password"]);
+    
+    
+    $this->model('blogmodel');
+           $new = $this->blogmodel->getLogin($username);
+           
+           
+    
+
+    $isChecked = password_verify($password, $new);
+    $_SESSION["isLoggedin"] = $isChecked;
+    $_SESSION["email"] = $username;
+
+    if($_SESSION["isLoggedin"]) {
+    header("Location: /main/Home");
+    }
+    
+        //$this->view("template/header");
+        //$this->view("template/nav");
+       // $this->view("login/login",$new);
+       // $this->view("template/footer");
+    
+    
+    else{
+       // $this->view("template/header");
+        //$this->view("template/nav");
+            header("Location: /main/login");
+
+    } 
+}else {
+        if(empty($_SESSION["isLoggedin"]) || !$_SESSION["isLoggedin"]) {
+
+
+         $this->view("template/header");
+       
+        $this->view("login/login");
+
+        $this->view("template/footer");
+        } else {
+            header("Location : /main/Home");
+
+        }
+    }
+
+       
+    }
+        
+
+
+function Home (){
+    $this->view("template/header");
         $this->view("template/nav");
         $this->view("template/middle");
-        $this->view("template/footer");
+                //$this->view("login/login");
+                        $this->view("template/footer");
+
+}
 
         
-    }
+    
     function listblog () {
             $this->model('blogmodel');
             $list = $this->blogmodel->getList();
@@ -97,51 +154,7 @@ $post = $this->blogmodel->getSingleBlog($serial);
 
 function login() {
 
-    if ($_SERVER["REQUEST_METHOD"] == "POST" && (empty($_SESSION["isLoggedIn"]) || !$_SESSION["isLoggedIn"])) {
-
-   
-    $username = htmlentities($_POST["email"]);
-    $password = htmlentities($_POST["password"]);
     
-    
-    $this->model('blogmodel');
-           $new = $this->blogmodel->getLogin($username);
-           
-           
-    
-
-    $isChecked = password_verify($password, $new);
-    $_SESSION["isLoggedin"] = $isChecked;
-    $_SESSION["email"] = $username;
-
-    if($_SESSION["isLoggedin"]) {
-    header("Location: /main/Index");
-    }
-    
-        //$this->view("template/header");
-        //$this->view("template/nav");
-       // $this->view("login/login",$new);
-       // $this->view("template/footer");
-    
-    
-    else{
-       // $this->view("template/header");
-        //$this->view("template/nav");
-            header("Location: /main/login");
-
-    } 
-}else {
-        if(empty($_SESSION["isLoggedin"]) || !$_SESSION["isLoggedin"]) {
-
-
-        $this->view("template/header");
-        $this->view("template/nav");
-        $this->view("login/login");
-        $this->view("template/footer");
-        } else {
-            header("Location : /main/Index");
-        }
-    }
     
     }
     

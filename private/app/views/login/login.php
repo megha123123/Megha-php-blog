@@ -1,4 +1,4 @@
-<form method="POST" action="/main/Index/">
+<form method="POST">
     
 
 <div class="form">
