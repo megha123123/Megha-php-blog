@@ -133,11 +133,10 @@ function login() {
 }else {
         if(empty($_SESSION["isLoggedin"]) || !$_SESSION["isLoggedin"]) {
 
-            $details = Array("title" => "sign In");
 
         $this->view("template/header");
         $this->view("template/nav");
-        $this->view("login/login",$details);
+        $this->view("login/login");
         $this->view("template/footer");
         } else {
             header("Location : /main/Index");
