@@ -98,12 +98,17 @@ $post = $this->blogmodel->getSingleBlog($serial);
 function login() {
 
     if($_SERVER["REQUEST_METHOD"] == "POST" && (empty($_SESSION["isLoggedIn"]) || !$_SESSION["isLoggedIn"])){
+
+   
     $username= htmlentities($_POST["email"]);
     $password = htmlentities($_POST["password"]);
     
     
     $this->model('blogmodel');
            $new = $this->blogmodel->getLogin($username);
+           
+           
+    
 
     $isChecked = password_verify($password,$new);
     $_SESSION["isLoggedin"] = $isChecked;
