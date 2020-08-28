@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <body class="image">
 
 <form method="POST">
