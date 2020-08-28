@@ -41,6 +41,7 @@
         }
 
         function start () {
+             
 
             $this->require("/private/app/controllers/main.php");
             $main = new Main();

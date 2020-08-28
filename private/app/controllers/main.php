@@ -1,4 +1,4 @@
-<?php session_start();
+<?php 
 
 class Main extends Controller {
 
@@ -9,7 +9,7 @@ class Main extends Controller {
      * http://localhost/
      */
     function Index () {
-       // session_start();
+        session_start();
 
     if ($_SERVER["REQUEST_METHOD"] == "POST" && (empty($_SESSION["isLoggedIn"]) || !$_SESSION["isLoggedIn"])) {
 
@@ -93,7 +93,7 @@ function Home (){
 
             }
             $this->view("template/footer");
-
+session_destroy();
 
     }
 
