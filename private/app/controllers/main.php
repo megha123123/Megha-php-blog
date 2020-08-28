@@ -118,7 +118,7 @@ session_destroy();
     }
 
     function newBlog() {
-                //session_start();
+                session_start();
 
 
         // $this->model('blogmodel');
@@ -130,7 +130,7 @@ session_destroy();
         $this->view("new/new");
         $this->view("template/footer");
 
-        
+        session_destroy();
     }
 
     function updateBlog($serial=null){

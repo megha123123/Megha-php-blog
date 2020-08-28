@@ -15,7 +15,7 @@
  <div class="form">
 
     <label for="email"><b>Email</b></label>
-    <input type="email" name="email" id="email" placeholder="Enter Email">
+    <input type="email" name="email" id="email" placeholder="Enter Email" value="<?php echo $_SESSION["email"];?>">
     <br>
 </div>
 
