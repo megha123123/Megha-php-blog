@@ -8,17 +8,8 @@
         <li> <a href="/main/listblog" ><span>Blog Listing</span></a></li>
         <li><a  href="/main/single"><span>View Single Blog</span></a></li>
         <li><a  href="/main/newBlog"><span>Add New Blog</span></a></li>
-        <?php if($_SESSION["isLoggedin"]){
 
-            echo('<li><a  href="/main/newBlog"><span>Add New Blog</span></a></li>');
-            echo('<li><a  href="/main/newBlog"><span>Sign Out</span></a></li>');
-
-
-        }
-        else{
-            echo('<li><a  href="/main/Index"><span>Login</span></a></li>');
-        }
-        ?>
+                     <li><a  href="/main/logout"><span>LogOut</span></a></li>
 
         
 
