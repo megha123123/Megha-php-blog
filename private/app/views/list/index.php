@@ -33,6 +33,7 @@
 
 
 
+<?php if($author_email == $_SESSION["email"]): ?>
 
 <form action="/main/updateBlog/<?php echo $serial_num;?>">
 <input type="submit" id="submit" name="submit" value="UPDATE">
@@ -44,6 +45,7 @@
     ?>
     </a>
 
+    <?php endif?>
 
 
 </div>
