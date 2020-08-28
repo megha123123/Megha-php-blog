@@ -9,7 +9,7 @@ class Main extends Controller {
      * http://localhost/
      */
     function Index () {
-        session_start();
+        //session_start();
 
     if ($_SERVER["REQUEST_METHOD"] == "POST" && (empty($_SESSION["isLoggedIn"]) || !$_SESSION["isLoggedIn"])) {
 
@@ -78,7 +78,7 @@ function Home (){
         
     
     function listblog () {
-                session_start();
+                //session_start();
 
             $this->model('blogmodel');
             $list = $this->blogmodel->getList();
@@ -93,7 +93,7 @@ function Home (){
 
             }
             $this->view("template/footer");
-session_destroy();
+//session_destroy();
 
     }
 
@@ -118,7 +118,7 @@ session_destroy();
     }
 
     function newBlog() {
-                session_start();
+               // session_start();
 
 
         // $this->model('blogmodel');
@@ -130,7 +130,7 @@ session_destroy();
         $this->view("new/new");
         $this->view("template/footer");
 
-        session_destroy();
+        //session_destroy();
     }
 
     function updateBlog($serial=null){
