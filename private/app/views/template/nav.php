@@ -11,9 +11,12 @@
         <?php if($_SESSION["isLoggedin"]){
 
             echo('<li><a  href="/main/newBlog"><span>Add New Blog</span></a></li>');
+            echo('<li><a  href="/main/newBlog"><span>Sign Out</span></a></li>');
+
+
         }
         else{
-            echo('<li><a  href="/main/login"><span>Login</span></a></li>');
+            echo('<li><a  href="/main/Index"><span>Login</span></a></li>');
         }
         ?>
 
